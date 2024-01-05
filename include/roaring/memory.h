@@ -23,6 +23,10 @@ typedef struct roaring_memory_s {
     roaring_aligned_free_p aligned_free;
 } roaring_memory_t;
 
+typedef struct roaring_memory_usage_s {
+    size_t mem;
+} roaring_memory_usage_t;
+
 void roaring_init_memory_hook(roaring_memory_t memory_hook);
 
 void* roaring_malloc(size_t);
